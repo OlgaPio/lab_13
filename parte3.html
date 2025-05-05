@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba y Depuración</title>
+</head>
+<body>
+    <h1>Prueba y Depuración de la Calculadora</h1>
+    <button onclick="pruebaCalculadora()">Probar</button>
+
+    <script>
+        function pruebaCalculadora() {
+            let num1 = parseFloat(prompt("Ingresa el primer número:"));
+            let num2 = parseFloat(prompt("Ingresa el segundo número:"));
+            let operacion = prompt("Ingresa la operación (+, -, *, /):");
+            let resultado;
+
+            switch (operacion) {
+                case "+":
+                    resultado = num1 + num2;
+                    break;
+                case "-":
+                    resultado = num1 - num2;
+                    break;
+                case "*":
+                    resultado = num1 * num2;
+                    break;
+                case "/":
+                    resultado = num2 !== 0 ? num1 / num2 : "Error: División por cero";
+                    break;
+                default:
+                    resultado = "Operación no válida";
+            }
+
+            console.log(`Resultado de ${num1} ${operacion} ${num2} = ${resultado}`);
+        }
+    </script>
+</body>
+</html>

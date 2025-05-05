@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Matemáticas</title>
+</head>
+<body>
+    <h1>Funciones Matemáticas</h1>
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1">
+    <label for="num2">Número 2:</label>
+    <input type="number" id="num2">
+    <button onclick="realizarOperaciones()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function suma(a, b) {
+            return a + b;
+        }
+        
+        function resta(a, b) {
+            return a - b;
+        }
+
+        function multiplicacion(a, b) {
+            return a * b;
+        }
+
+        function division(a, b) {
+            return b !== 0 ? a / b : "Error: División por cero";
+        }
+
+        function realizarOperaciones() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            
+            let resultado = `Suma: ${suma(num1, num2)}, Resta: ${resta(num1, num2)}, Multiplicación: ${multiplicacion(num1, num2)}, División: ${division(num1, num2)}`;
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>
